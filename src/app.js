@@ -12,8 +12,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', indexRouter);
 export default app;
 
-console.log("Brought to you by:  https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/");
+var PORT = process.env.PORT || 8200;
 
-setTimeout(() => {
-    console.log("ES6??????");
-}, 1000);
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
